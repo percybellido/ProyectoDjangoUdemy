@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+{% endblock title %}
+
+{% block content %}
+
+{% include 'includes/header.html' %}
+<div class="container">
+    <div class="row">
+        <div class="column">
+            <h1>Registrar nuevo departamento</h1>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <form  class="row" action="" method="POST">{% csrf_token %}
+                <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Nombres:
+                        {{ form.nombre }}
+                    </label>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Apellidos:
+                        {{ form.apellidos }}
+                    </label>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Departamento:
+                        {{ form.departamento }}
+                    </label>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Short_Name:
+                        {{ form.short_name }}
+                    </label>
+                </div>
+
+        
+                <h3>Datos del departamento</h3>
+                <p>
+                    {{ form.departamento }}
+                </p>
+                <p>
+                    {{ form.short_name }}
+                </p>
+        
+                
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </form>
+
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock content%}
+
+    

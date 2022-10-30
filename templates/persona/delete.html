@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+
+{% endblock title %}
+
+
+{% block content %}
+
+{% include 'includes/header.html' %}
+<div class="container">
+    <div class="row w-100">
+        <div class="col-12">
+            <h1>Eliminar Empleado: <span>{{ object.full_name }}</span></h1>
+        </div>
+    </div>
+    <div class="row" w-100>
+        <div class="col-12">
+            
+            <form  class="row" action="" method="POST">{% csrf_token %}
+                <div class="callout">
+                    <p>Confirme que desea eliminar</p>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Eliminar</button>
+
+            </form>
+
+        </div>
+    </div>
+    
+
+</div>
+{% endblock content%}
+    

@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+    Editar empleado
+
+{% endblock title %}
+
+{% block content %}
+
+{% include "includes/header.html" %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Modificar Empleado</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <form  class="container" action="" method="POST">{% csrf_token %}
+                <div class="row">
+                    
+                        <div class="mb-3 row">
+                            <label for="inputPassword" class="col-sm-2 col-form-label">Nombres:
+                                {{ form.first_name }}
+                            </label>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="inputPassword" class="col-sm-2 col-form-label">Apellidos:
+                                {{ form.last_name }}
+                            </label>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="inputPassword" class="col-sm-2 col-form-label">Trabajo:                           
+                                {{ form.job }}
+                            </label>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="inputPassword" class="col-sm-2 col-form-label">Departamento:
+                                {{ form.departamento }}
+                            </label>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="inputPassword" class="col-sm-2 col-form-label">Habilidades:
+                                {{ form.habilidades }}
+                            </label>
+                        </div>
+
+                    
+                                     
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Actualizar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+    
+
